@@ -1,30 +1,17 @@
-'''
-Plan:
-Retrieve URL
-Parse for paragraphs/other meaningful text
-//Covered using urllib module
+##ALL IMPORTED MODULES AND LIBRARIES
 
-“Read”; builds a KB and uses previous knowledge, makes inferences and determines degree of validity using probability; NLP
-
-Spits out answer (Graph, %’s , tables, etc)
-
-Storage (How will this data be used?)
-     - Add to KB
-     - Make inferences about other topics (if possible)
 
 
 '''
-import urllib.request
-import urllib.parse
-from urllib.parse import urlparse
-import re
-import wsgiref.simple_server
+##EXTRACTING TEXT FROM HTML AND PREPROCESSING THE DATA
 
-print("Enter a URL")
-url = input()
-try:
-    headers = {}
 
+
+##ASSESSING VALIDITY
+
+
+
+##OUTPUTING THE TBT SCORE
 
 
 
