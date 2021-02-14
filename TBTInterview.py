@@ -1,6 +1,6 @@
 a = [[1,2,3],
      [4,5,6],
-     [7,8,9]]
+     [6,8,9]]
 
 def TBTproblem(a): #where "a" is a SQUARE 2D array
                    #(Hint: This being square is really important for this working properly)

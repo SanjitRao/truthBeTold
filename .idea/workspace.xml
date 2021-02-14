@@ -19,11 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b43ae349-9a3a-428d-b882-62dd862d1eeb" name="Default Changelist" comment="TBT interview Question">
+    <list default="true" id="b43ae349-9a3a-428d-b882-62dd862d1eeb" name="Default Changelist" comment="Blank layout for first draft">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TBTInterview.py" beforeDir="false" afterPath="$PROJECT_DIR$/TBTInterview.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/firstDraft.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firstDraft.py" beforeDir="false" afterPath="$PROJECT_DIR$/firstDraft.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +38,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="1kngQ0z0ncOpZbNTbS2hwHu6mmA" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -167,7 +174,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608880803209</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Blank layout for first draft">
+      <created>1612079400245</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1612079400245</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -186,6 +200,7 @@
     <MESSAGE value="Lines 23 -&gt; 39 Example of web app code" />
     <MESSAGE value="prototype: recieives data + parse for paragraphs" />
     <MESSAGE value="TBT interview Question" />
-    <option name="LAST_COMMIT_MESSAGE" value="TBT interview Question" />
+    <MESSAGE value="Blank layout for first draft" />
+    <option name="LAST_COMMIT_MESSAGE" value="Blank layout for first draft" />
   </component>
 </project>
