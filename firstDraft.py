@@ -1,5 +1,8 @@
 ##ALL IMPORTED MODULES AND LIBRARIES
-import nltk
+import urllib.request
+import urllib.parse
+import re
+from nltk.tokenize import sent_tokenize, word_tokenize #download is not working for me for some reason
 
 ##EXTRACTING TEXT FROM HTML AND PREPROCESSING THE DATA
 htmlTESTString = '''
@@ -10,7 +13,6 @@ htmlTESTString = '''
 
 <p> Humans breathe oxygen. Cats can fly. The sky is blue. </p>
 
- Humans = breathe(oxygen)
 
 </body>
 </html>
@@ -85,3 +87,38 @@ Highlight innacurate phrases
 - Selenium: basically inspect element capabilities  
 
 '''
+
+
+#Data extraction
+##***This code requires we hardcode a url and its query string***
+url = "Base url"
+values = {'variable': "value"}
+
+data = urllib.parse.urlencode(values)
+data = data.encode('utf-8')
+req = urllib.request.Request(url, data)
+resp = urllib.request.urlopen(req)
+respData = resp.read()
+
+paragraphs = re.findall(r'<p>(.*?)</p>', str(respData))
+#paragraphs = "Humans breathe oxygen. Cats can fly. The sky is blue."
+
+#Preprocessing
+tokenizedText = sent_tokenize(paragraphs)
+'''nltk to extract parts of speech
+- https://pythonprogramming.net/part-of-speech-tagging-nltk-tutorial/
+-NLTK
+    - subject = ?  action = ? object = ? verb = ? 
+    - tense = ? "Trump was president vs trump is president" ***Assume present tense
+    - remove stop words
+    - Lemmatization (think abt tense)
+    - Normalization
+
+'''
+
+
+
+#Now is list of sentences
+
+
+

@@ -19,9 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b43ae349-9a3a-428d-b882-62dd862d1eeb" name="Default Changelist" comment="Blank layout for first draft">
+    <list default="true" id="b43ae349-9a3a-428d-b882-62dd862d1eeb" name="Default Changelist" comment="Pseudocode for the TruthBeTold Algorithm!&#10;- Please work on the &quot;Assessment of Validity&quot; pseudocode and have it ready by next week to discuss. Good job team!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TBTInterview.py" beforeDir="false" afterPath="$PROJECT_DIR$/TBTInterview.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/firstDraft.py" beforeDir="false" afterPath="$PROJECT_DIR$/firstDraft.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -181,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612079400245</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Pseudocode for the TruthBeTold Algorithm!&#10;- Please work on the &quot;Assessment of Validity&quot; pseudocode and have it ready by next week to discuss. Good job team!">
+      <created>1613336300720</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1613336300720</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -201,6 +207,7 @@
     <MESSAGE value="prototype: recieives data + parse for paragraphs" />
     <MESSAGE value="TBT interview Question" />
     <MESSAGE value="Blank layout for first draft" />
-    <option name="LAST_COMMIT_MESSAGE" value="Blank layout for first draft" />
+    <MESSAGE value="Pseudocode for the TruthBeTold Algorithm!&#10;- Please work on the &quot;Assessment of Validity&quot; pseudocode and have it ready by next week to discuss. Good job team!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pseudocode for the TruthBeTold Algorithm!&#10;- Please work on the &quot;Assessment of Validity&quot; pseudocode and have it ready by next week to discuss. Good job team!" />
   </component>
 </project>
