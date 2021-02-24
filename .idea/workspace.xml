@@ -19,7 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b43ae349-9a3a-428d-b882-62dd862d1eeb" name="Default Changelist" comment="Pseudocode for the TruthBeTold Algorithm!&#10;- Please work on the &quot;Assessment of Validity&quot; pseudocode and have it ready by next week to discuss. Good job team!">
+    <list default="true" id="b43ae349-9a3a-428d-b882-62dd862d1eeb" name="Default Changelist" comment="Updated 2/21/2021">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/firstDraft.py" beforeDir="false" afterPath="$PROJECT_DIR$/firstDraft.py" afterDir="false" />
     </list>
@@ -187,7 +187,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613336300720</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Updated 2/21/2021">
+      <created>1613937503491</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1613937503491</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -208,6 +215,7 @@
     <MESSAGE value="TBT interview Question" />
     <MESSAGE value="Blank layout for first draft" />
     <MESSAGE value="Pseudocode for the TruthBeTold Algorithm!&#10;- Please work on the &quot;Assessment of Validity&quot; pseudocode and have it ready by next week to discuss. Good job team!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Pseudocode for the TruthBeTold Algorithm!&#10;- Please work on the &quot;Assessment of Validity&quot; pseudocode and have it ready by next week to discuss. Good job team!" />
+    <MESSAGE value="Updated 2/21/2021" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated 2/21/2021" />
   </component>
 </project>

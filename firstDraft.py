@@ -2,9 +2,10 @@
 import urllib.request
 import urllib.parse
 import re
+import nltk
 from nltk.tokenize import sent_tokenize, word_tokenize #download is not working for me for some reason
+from nltk.tokenize import PunktSentenceTokenizer
 
-##EXTRACTING TEXT FROM HTML AND PREPROCESSING THE DATA
 htmlTESTString = '''
 <!DOCTYPE html>
 <html>
@@ -17,6 +18,69 @@ htmlTESTString = '''
 </body>
 </html>
 '''
+##EXTRACTING TEXT FROM HTML AND PREPROCESSING THE DATA
+url = "Base url"
+values = {'variable': "value"}
+
+data = urllib.parse.urlencode(values)
+data = data.encode('utf-8')
+req = urllib.request.Request(url, data)
+resp = urllib.request.urlopen(req)
+respData = resp.read()
+
+paragraphs = re.findall(r'<p>(.*?)</p>', str(respData))
+#paragraphs = "Humans breathe oxygen. Cats can fly. The sky is blue."
+##***This code requires we hardcode a url and its query string***
+
+'''nltk to extract parts of speech
+- https://pythonprogramming.net/part-of-speech-tagging-nltk-tutorial/
+-NLTK
+    - subject = ?  action = ? object = ? verb = ? 
+    - tense = ? "Trump was president vs trump is president" ***Assume present tense
+    - remove stop words
+    - Lemmatization (think abt tense)
+    - Normalization
+
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
+words = word_tokenize(paragraphs)
+stop_words = set(stopwords.words("english"))
+filtered_words = [w for w in words if not in stop_words]
+    #Maybe not use it?
+'''
+#Preprocessing
+tokenizedText = sent_tokenize(paragraphs)
+#['Humans breath oxygen.', 'Cats can fly.'. The sky is blue.']
+
+trained_text = '''This is text to pretrain PunktSentenceTokenizer. I know that cats are great! Humans need oxygen to survive.
+               Cats do not have the ability to fly, and the sky is blue.'''
+sample_text = paragraphs
+custom_sent_tokenizer = PunktSentenceTokenizer(trained_text)
+
+tokenized = custom_sent_tokenizer.tokenize(sample_text)
+
+def process_content():#will store each word allong with their part of speech in 'tagged'
+    try:
+        for i in tokenized:
+            words = nltk.word_tokenize()
+            tagged = nltk.pos_tag(words)
+    except Exception as e:
+        print(e)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 '''
 DATABASE
@@ -88,33 +152,8 @@ Highlight innacurate phrases
 
 '''
 
-
 #Data extraction
-##***This code requires we hardcode a url and its query string***
-url = "Base url"
-values = {'variable': "value"}
 
-data = urllib.parse.urlencode(values)
-data = data.encode('utf-8')
-req = urllib.request.Request(url, data)
-resp = urllib.request.urlopen(req)
-respData = resp.read()
-
-paragraphs = re.findall(r'<p>(.*?)</p>', str(respData))
-#paragraphs = "Humans breathe oxygen. Cats can fly. The sky is blue."
-
-#Preprocessing
-tokenizedText = sent_tokenize(paragraphs)
-'''nltk to extract parts of speech
-- https://pythonprogramming.net/part-of-speech-tagging-nltk-tutorial/
--NLTK
-    - subject = ?  action = ? object = ? verb = ? 
-    - tense = ? "Trump was president vs trump is president" ***Assume present tense
-    - remove stop words
-    - Lemmatization (think abt tense)
-    - Normalization
-
-'''
 
 
 
