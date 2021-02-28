@@ -52,17 +52,17 @@ filtered_words = [w for w in words if not in stop_words]
 tokenizedText = sent_tokenize(paragraphs)
 #['Humans breath oxygen.', 'Cats can fly.'. The sky is blue.']
 
-trained_text = '''This is text to pretrain PunktSentenceTokenizer. I know that cats are great! Humans need oxygen to survive.
+train_text = '''This is text to pretrain PunktSentenceTokenizer. I know that cats are great! Humans need oxygen to survive.
                Cats do not have the ability to fly, and the sky is blue.'''
 sample_text = paragraphs
-custom_sent_tokenizer = PunktSentenceTokenizer(trained_text)
+custom_sent_tokenizer = PunktSentenceTokenizer(train_text)
 
 tokenized = custom_sent_tokenizer.tokenize(sample_text)
 
 def process_content():#will store each word allong with their part of speech in 'tagged'
     try:
         for i in tokenized:
-            words = nltk.word_tokenize()
+            words = nltk.word_tokenize(i)
             tagged = nltk.pos_tag(words)
     except Exception as e:
         print(e)
