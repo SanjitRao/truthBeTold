@@ -5,13 +5,6 @@ import re
 import nltk
 from nltk.tokenize import sent_tokenize, word_tokenize #download is not working for me for some reason
 from nltk.tokenize import PunktSentenceTokenizer
-from nltk.corpus import wordnet
-import nltk.tokenize.punkt
-from nltk.stem import WordNetLemmatizer
-nltk.download('punkt')
-nltk.download('wordnet')
-wordnet_lemmatizer = WordNetLemmatizer()
-nltk.download('averaged_perceptron_tagger')
 
 htmlTESTString = '''
 <!DOCTYPE html>
@@ -65,28 +58,25 @@ sample_text = paragraphs
 custom_sent_tokenizer = PunktSentenceTokenizer(train_text)
 
 tokenized = custom_sent_tokenizer.tokenize(sample_text)
+subject_dict = {}
 
 def process_content():#will store each word allong with their part of speech in 'tagged'
     try:
         for i in tokenized:
             words = nltk.word_tokenize(i)
             tagged = nltk.pos_tag(words)
+            for j in i:
+                if nltk.pos_tag(j) == 'NN', 'NNS', 'NNP', 'NNPS':
+                    subject = j
+                elif nltk.pos_tag(j) == 'VB', 'VBD', 'VBG', 'VBN', 'VBP', 'VBZ':
+                    verb = j    
+                elif nltk.pos_tag(j) == 'JJ', 'JJR', 'JJS', 'RB', 'RBR', 'RBS'
+                    adverb = j
+            subject_dict[subject] = verb(adverb)
     except Exception as e:
         print(e)
 
 
-# Takes untokenized text and lemmatizes it
-
-def get_wordnet_pos(word):
-    tag = nltk.pos_tag([word])[0][1][0].upper()
-    tag_dict = {"J": wordnet.ADJ,
-                "N": wordnet.NOUN,
-                "V": wordnet.VERB,
-                "R": wordnet.ADV}
-
-    return tag_dict.get(tag, wordnet.NOUN)
-
-print([wordnet_lemmatizer.lemmatize(w, get_wordnet_pos(w)) for w in (nltk.word_tokenize(train_text))])
 
 
 
