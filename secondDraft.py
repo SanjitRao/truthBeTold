@@ -121,8 +121,8 @@ def get_wordnet_pos(word):
 
     return tag_dict.get(tag, wordnet.NOUN)
 
-url_sentence = "I was wearing a green jacket and blue boots".split()
-database_sentence = "I was wearing a red coat and blue shoes".split()
+url_sentence = "I was wearing a green jacket and blue boots".split() # replace with sentence from the article
+database_sentence = "I was wearing a red coat and blue shoes".split() # replace with fact from database
 
 # url_sentence = "The sky is red".split()
 # database_sentence = "The sky is blue".split()
@@ -133,7 +133,7 @@ stop_words.add("the")
 filtered_url_sentence = []
 filtered_database_sentence = []
 
-
+# remove stop words
 for w in url_sentence:
     if w.lower() not in stop_words:
         filtered_url_sentence.append(w)
@@ -146,6 +146,8 @@ print(filtered_url_sentence, filtered_database_sentence)
 similarity_list = []
 
 warnings = []
+
+# find similarity
 
 for i in range(len(filtered_url_sentence)):
     word1 = wordnet.synset(wordnet_lemmatizer.lemmatize(filtered_url_sentence[i], get_wordnet_pos(filtered_url_sentence[i])) + "." + get_wordnet_pos(filtered_url_sentence[i]) + ".01")
