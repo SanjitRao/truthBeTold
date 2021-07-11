@@ -1,0 +1,93 @@
+body{ /*sets background to black*/
+  background: #000000;
+}
+
+img.logo{ /*TBT icon in top right*/
+  width:90px;
+  margin-top:15px;
+  margin-left:80px;
+}
+
+.hr{ /*creates a centered dividing line with a slight glow*/
+  height:3px;
+  width:100%;
+  float:left;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color:#C8DDFD;
+}
+
+.roundBlock{ /*creates a rectangle with rounded borders for buttons and boxes (default size: 300x200, default color: light blue)*/
+  width: 300px;
+  height: 200px;
+  border-style: none;
+  background-color:#7CA7E6;
+  border-radius: 10px;
+}
+
+.semicond{ /*Barlow Semi-Condensed font in a frequently-used cyan color*/
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-style: normal;
+  color:#618AF4;
+}
+
+.overlay{ /*adds a overlay behind the collapsible menu*/
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+  cursor: pointer;
+}
+
+.sidenav {  /*side menu (NEEDS CSS WORK)*/
+  height: 100%;
+  width: 300px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #000;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a { /*links in side menu ('a' is used for links in HTML)*/
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color:#93BBFA;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover { /*hover over link in side menu*/
+  color: #fff;
+}
+
+.closebtn { /*button/icon to close menu*/
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn { /*button/icon to open menu*/
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  cursor: pointer;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
