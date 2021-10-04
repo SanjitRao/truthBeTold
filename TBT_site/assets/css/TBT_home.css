@@ -46,7 +46,7 @@ img.logo{ /*TBT icon in top right*/
   cursor: pointer;
 }
 
-.sidenav {  /*side menu (NEEDS CSS WORK)*/
+.mainNav {  /*side menu (NEEDS CSS WORK)*/
   height: 100%;
   width: 300px;
   position: fixed;
@@ -59,7 +59,7 @@ img.logo{ /*TBT icon in top right*/
   padding-top: 60px;
 }
 
-.sidenav a { /*links in side menu ('a' is used for links in HTML)*/
+.mainNav a { /*links in side menu ('a' is used for links in HTML)*/
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
@@ -68,7 +68,7 @@ img.logo{ /*TBT icon in top right*/
   transition: 0.3s;
 }
 
-.sidenav a:hover { /*hover over link in side menu*/
+.mainNav a:hover { /*hover over link in side menu*/
   color: #fff;
 }
 
