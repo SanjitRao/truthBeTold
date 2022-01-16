@@ -2,12 +2,8 @@ import pandas as pd
 import numpy as np
 import sklearn
 from sklearn import linear_model
-from sklearn.utils import shuffle
-import tensorflow
-from true import *
-from false import *
 
-data = pd.read_csv("data.csv", sep=",")
+data = pd.read_csv("../TBT_Data/data.csv", sep=",")
 data = data[["polarization", "truth", "sub_obj"]]
 
 predict = "truth"
