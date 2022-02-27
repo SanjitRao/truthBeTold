@@ -45,7 +45,9 @@ text = '\n'.join(chunk for chunk in chunks if chunk)
 
 print(text)
 
-sentence_tokens = sent_tokenize(text, language="english")
+def sentence_tokenizer():
+    article_sentence_tokens = sent_tokenize(text, language="english") #list of sentences now
+    return article_sentence_tokens
 
 
 
