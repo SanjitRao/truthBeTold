@@ -10,6 +10,24 @@ import lxml
 import requests
 import datetime as dt
 import pandas as pd
+
+import nltk
+from nltk.tokenize import word_tokenize
+from collections import Counter
+nltk.download('wordnet')      #download if using this module for the first time
+
+
+from nltk.stem import WordNetLemmatizer
+from nltk.corpus import stopwords
+nltk.download('stopwords')    #download if using this module for the first time
+
+
+#For Gensim
+import gensim
+import string
+from gensim import corpora
+from gensim.corpora.dictionary import Dictionary
+from nltk.tokenize import word_tokenize
 #TBT's NewsAPI key: ee08accb3d36479789b2659c9da1a59d (need to imput as a string)
 
 #TODO: 1) fill news_orgs_dict with ~20 news orgs.
@@ -48,3 +66,5 @@ for text in bbc_bitcoin_text:
   print(text)
   print()
 
+def BoW_Topic_Identification():
+  ref_texts = keyword, news_source, API_KEY = api_key

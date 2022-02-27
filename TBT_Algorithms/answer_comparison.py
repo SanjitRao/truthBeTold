@@ -3,6 +3,15 @@ from transformers import AutoTokenizer, AutoModelForSequenceClassification
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 
+
+#TODO: 1) Create a string of all news orgs you wanna pull from (or is this actually necessary?)
+#      2)
+
+from Preprocessing import sentence_tokenizer
+ans = sentence_tokenizer() #sentence tokenizes the base article
+from NewsAPI import keyword_NS_searchAlg_V2, BoW_Topic_Identification
+ref_ans = ""
+
 class MNLIComparator:
     def __init__(self, checkpoint="roberta-large-mnli"):
         self.tokenizer = AutoTokenizer.from_pretrained(checkpoint)
