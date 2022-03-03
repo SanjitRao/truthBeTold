@@ -20,7 +20,7 @@ It is based on the 1986 novel of the same name by Winston Groom and stars Tom Ha
 Mykelti Williamson and Sally Field. The story depicts several decades in the life of Forrest Gump (Hanks), \
 a slow-witted but kind-hearted man from Alabama who witnesses and unwittingly influences several defining \
 historical events in the 20th century United States. The film differs substantially from the novel."
-
+"""
 
 #TODO install the dependencies (then the code below will work!)
 '''
@@ -36,6 +36,7 @@ historical events in the 20th century United States. The film differs substantia
 !ls s2v_old
 '''
 
+
 from pprint import pprint
 import nltk
 nltk.download('stopwords')
@@ -48,6 +49,7 @@ payload = {
         }
 output = qg.predict_shortq(payload)
 pprint (output)
+
 
 
 
