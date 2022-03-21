@@ -22,3 +22,4 @@ class tinyRobertaQA:
 
         res = self.pipeline(QA_input)
         return res
+

@@ -40,7 +40,7 @@ def keyword_NS_searchAlg_V2(keyword, news_source, API_KEY = api_key): # (Str, St
   newsapi= NewsApiClient(API_KEY)
   data = newsapi.get_everything(q=keyword, sources=news_source, language='en')
   rv = []
-  for article_num in range(data['totalResults']):
+  for article_num in range(len(data['articles'])):
     url = str(data['articles'][article_num]['url'])
   #"http://news.bbc.co.uk/2/hi/health/2284783.stm"
     html = urlopen(url).read()
@@ -65,6 +65,8 @@ bbc_bitcoin_text = keyword_NS_searchAlg_V2('bitcoin', 'bbc-news')
 for text in bbc_bitcoin_text:
   print(text)
   print()
+
+
 
 def BoW_Topic_Identification():
   ref_texts = keyword, news_source, API_KEY = api_key
