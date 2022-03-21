@@ -7,10 +7,10 @@ from sklearn.metrics.pairwise import cosine_similarity
 #TODO: 1) Create a string of all news orgs you wanna pull from (or is this actually necessary?)
 #      2)
 
-from Preprocessing import sentence_tokenizer
-ans = sentence_tokenizer() #sentence tokenizes the base article
-from NewsAPI import keyword_NS_searchAlg_V2, BoW_Topic_Identification
-ref_ans = ""
+# from Preprocessing import sentence_tokenizer
+# ans = sentence_tokenizer() #sentence tokenizes the base article
+# from NewsAPI import keyword_NS_searchAlg_V2, BoW_Topic_Identification
+# ref_ans = ""
 
 class MNLIComparator:
     def __init__(self, checkpoint="roberta-large-mnli"):
@@ -39,13 +39,28 @@ class MiniLMComparator:
     def __init__(self, checkpoint='sentence-transformers/paraphrase-MiniLM-L6-v2'):
         self.model = SentenceTransformer(checkpoint)
 
-    def compare(self, ans, ref_ans):
+    def compareStrings(self, ans, ref_ans):
         """
         Function compares answers to see if they are paraphrases of each other. It is commutative.
 
         Parameteres:
-        ans: String or array of strings of answer(s) derived from article that is being tested
-        ref_ans: String or array of strings of the corresponding answer(s) derived from reference article
+        ans: String derived from article that is being tested
+        ref_ans: String of the corresponding answer(s) derived from reference article
+
+        Returns an array of arrays containing the probability of the pair of sentences being paraphrases of each other
+        """
+
+        ans_array = [ans]
+        ref_ans_array = [ref_ans]
+        return self.compareArrays(ans_array, ref_ans_array)
+
+    def compareArrays(self, ans, ref_ans):
+        """
+        Function compares answers to see if they are paraphrases of each other. It is commutative.
+
+        Parameteres:
+        ans: Array of strings of answer(s) derived from article that is being tested
+        ref_ans: Array of strings of the corresponding answer(s) derived from reference article
 
         Returns an array of arrays, each containing the probability of a pair of sentences being paraphrases of each other
         """
