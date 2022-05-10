@@ -1,5 +1,8 @@
 # TruthBeTold
-TruthBeTold is a student organization devoted to designing algorithms that can combat misinformation online.
+TruthBeTold is a high-school student organization devoted to designing an algorithm that can combat misinformation online. Through this Github, we hope to present our approach and what work we believe still needs to be done. 
+
+
+##Approach:
 
 ## Notes for things to add in the future:
 - [ ] Describe TBT's history and methodology (flowchart)
